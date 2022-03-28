@@ -4,14 +4,14 @@ import logoImg from '../assets/images/logo.svg';
 import googleIconImg from '../assets/images/google-icon.svg';
 import illustrationImg from '../assets/images/illustration.svg';
 
-import { UseAuth } from '../hooks/UseAuth';
+import { useAuth } from '../hooks/useAuth';
 import { Button } from '../components/Button';
 
 import '../styles/auth.scss';
 
 export function Home() {
     const navigate = useNavigate();
-    const { user, signInWithGoogle } = UseAuth();
+    const { user, signInWithGoogle } = useAuth();
 
     async function handleCreateRoom() {
         if (!user) {
